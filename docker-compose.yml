@@ -1,0 +1,20 @@
+##################################################################
+# docker-compose
+# 起動　docker-compose up -d
+# 停止(imageも含めて削除) docker-compose down --rmi all
+##################################################################
+
+version: "3"
+
+services:
+  # python 環境
+  python:
+    # どのDockerfileを使うか
+    build: .
+    # コンテナが起動し続ける
+    tty: true
+    # コンテナ名
+    container_name: pycontainer_stockai
+    # マウントするディレクトリ
+    volumes: 
+      - .:/stockai
