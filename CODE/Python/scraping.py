@@ -65,6 +65,7 @@ class SCRAPING_STOCK():
         self.save_df_stock()
 
 if __name__ == '__main__':
-    print("----- Start scraping stock -----")
+    print("----- Start scraping stock ------")
+    print("test")
     scraping_stock = SCRAPING_STOCK()
     scraping_stock.execute()
